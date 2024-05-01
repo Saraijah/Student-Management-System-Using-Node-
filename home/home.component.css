@@ -1,0 +1,74 @@
+body{
+    
+        font-family: "Unna", serif;
+        font-weight: 700;
+        font-style: normal;
+      
+}
+.flex-end{
+
+  margin-left: 80rem;
+  align-self: flex-end;
+
+}
+
+.mat-elevation-z8{
+    margin-left: 16rem;
+    width: 80rem;
+}
+/* Custom styles for the table header */
+/* Using !important */
+/* styles.css */
+
+/* styles.css */
+
+/* styles.css */
+
+/* Style for odd rows */
+tr:nth-child(odd) {
+    background-color: #f0f0f0; /* Light gray background for odd rows */
+  }
+  
+  /* Style for even rows */
+  tr:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
+  }
+  
+  /* styles.css */
+
+/* Set outline color */
+
+/* Hover effect */
+.btn-outline-primary {
+  color: #FF5A00;
+  background-color: transparent;
+  border-color: #FF5A00;
+}
+
+.btn-outline-primary:hover{
+  background-color: rgb(7, 58, 75);
+  color: white;
+}
+.action-icons{
+
+  font-size: 20px;
+  margin-left: 15px;
+  color: #FF5A00;
+}
+  
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .mat-elevation-z8 {
+      overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    }
+  
+    /* Hide some columns on smaller screens */
+    .mat-table th:nth-child(3),
+    .mat-table td:nth-child(3),
+    .mat-table th:nth-child(4),
+    .mat-table td:nth-child(4) {
+      display: none;
+    }
+  }
+  

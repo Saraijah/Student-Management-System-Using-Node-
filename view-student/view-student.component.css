@@ -1,0 +1,13 @@
+.list-group {
+    max-width: 100%;
+    margin-left: 10rem;
+    background-color: #F1F5F6; /* Apply background color to the entire list */
+  }
+  
+  .list-group-item {
+    background-color: inherit; /* Inherit the background color from the list */
+  }
+  
+  .col {
+    max-width: 200px;
+  }

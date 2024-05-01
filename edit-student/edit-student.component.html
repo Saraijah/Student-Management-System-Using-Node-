@@ -1,0 +1,32 @@
+<nav aria-label="breadcrumb" style="margin-left: 13rem;">
+  <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Edit {{student.first_name}} </li>
+      <li class="breadcrumb-item active" aria-current="page">Id:{{student.id}} </li>
+  </ol>
+</nav>
+
+<div class="container mt-5">
+  <h2> Update {{student.first_name}} {{student.last_name}} </h2>
+
+  <!-- Angular form with ngModel -->
+  <form (ngSubmit)="updateStudent(studentForm)" #studentForm="ngForm">
+
+      <div class="mb-3">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="first_name" [(ngModel)]="student['first_name']" placeholder="Enter first name" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="last_name" [(ngModel)]="student['last_name']" placeholder="Enter last name" required>
+      </div>
+
+      <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="student['phone']" placeholder="Enter phone number" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

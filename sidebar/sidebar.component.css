@@ -1,0 +1,46 @@
+body{
+
+    
+        font-family: "Unna", serif;
+        font-weight: 700;
+        font-style: normal;
+      
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgb(7, 58, 75) ;
+    padding-top: 20px;
+  }
+  
+
+ 
+  /* Style links inside the sidebar */
+  .sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+  }
+  
+  /* Change color on hover */
+  .sidebar a:hover {
+    background-color: #555;
+  }
+  
+  /* Main content */
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+  img{
+
+    width:5rem;
+    height: 5rem;
+  }

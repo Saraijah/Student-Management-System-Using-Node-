@@ -1,0 +1,62 @@
+<body style="font-family: 'Unna', serif;">
+  
+  
+  <div class="flex-end">
+    <a [routerLink]="'/create'" class="btn btn-outline-primary" type="button" style="width: 200px; margin-bottom: 10px; outline: 1px solid #FF5A00;">
+      Add new student <i class="bi bi-plus-lg"></i>
+    </a>
+  </div>
+
+  
+  <div class="container-fluid" style="width: 100%;">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="studentData">
+
+        <!-- id column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef style="background-color: rgb(7, 58, 75); color: #fff;"> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="first_name">
+          <th mat-header-cell *matHeaderCellDef style="background-color: rgb(7, 58, 75); color: #fff;"> First Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+        </ng-container>
+    
+        <!-- Last Name Column -->
+        <ng-container matColumnDef="last_name">
+          <th mat-header-cell *matHeaderCellDef style="background-color: rgb(7, 58, 75); color: #fff;"> Last Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+        </ng-container>
+    
+        <!-- Phone Column -->
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef style="background-color: rgb(7, 58, 75); color: #fff;"> Phone Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+        </ng-container>
+  
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions" class="flex-end">
+          <th mat-header-cell *matHeaderCellDef style="background-color: rgb(7, 58, 75); color: #fff;"> Action </th>
+          <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/studentDetail', element.id]" class="action-icons"><i class="bi bi-eye"></i></a>
+            <a [routerLink]="['/changestudentDetail', element.id]" class="action-icons"><i class="bi bi-pencil"></i></a>
+            <a href="javascript:void(0)" class="action-icons" (click)="deleteStudent(element.id)"><i class="bi bi-person-x"></i></a>
+          </td>
+        </ng-container>
+        
+        <!-- Define the displayed columns -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+      <!-- Add the paginator below the table -->
+      <mat-paginator [pageSizeOptions]="[10, 15 , 20, 50]" showFirstLastButtons aria-label="Select page"
+                     [length]="paginatorLength" [pageSize]="5"
+                     (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
+  </div>
+  
+</body>
